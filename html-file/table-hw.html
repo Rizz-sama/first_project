@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <table></table>
+​
+    <script>
+        const fruits = [
+            {id: 1, name: "apple", price: "3$"},
+            {id: 2, name: "orange", price: "2$"},
+            {id: 3, name: "mango", price: "1$"},
+            {id: 4, name: "strawberry", price: "4$"},
+            {id: 5, name: "grapes", price: "3$"},
+        ]
+
+        const table = document.querySelector("table");
+        table.setAttribute("border", 2)
+
+        fruits.forEach(fruits => {
+            const tr = document.createElement("tr");
+            table.append(tr);
+
+            tr.innerHTML = `
+            <td>${fruits.id}</td>
+            <td>${fruits.name}</td>
+            <td>${fruits.price}</td>
+            `
+
+        })
+
+        
+
+
+    </script>
+</body>
+</html>
